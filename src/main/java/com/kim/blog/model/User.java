@@ -4,21 +4,14 @@ import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-<<<<<<< HEAD
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-=======
->>>>>>> 92cc3bc30ae1bc5f901a8821fcc8cdf9a09f4ca4
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
-<<<<<<< HEAD
-import org.hibernate.annotations.DynamicInsert;
-=======
->>>>>>> 92cc3bc30ae1bc5f901a8821fcc8cdf9a09f4ca4
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,10 +20,9 @@ import lombok.NoArgsConstructor;
 
 // ORM -> Java(다른언어 포함) Object -> 테이블로 매핑해주는 기술
 
-<<<<<<< HEAD
+
 //@DynamicInsert => insert할때 null인 필드 제외
-=======
->>>>>>> 92cc3bc30ae1bc5f901a8821fcc8cdf9a09f4ca4
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -51,15 +43,12 @@ public class User {
 	@Column(nullable = false, length = 50)
 	private String email;
 	
-<<<<<<< HEAD
+
 	//@ColumnDefault("'USER'");
 	// DB는 RoleType이라는 게 없다.
 	@Enumerated(EnumType.STRING) // Enum이 String 타입이라고 알려준다
 	private RoleType role; // Enum
-=======
-	@ColumnDefault("'user'")
-	private String role; // Enum
->>>>>>> 92cc3bc30ae1bc5f901a8821fcc8cdf9a09f4ca4
+
 	
 	@CreationTimestamp // 시간이 자동으로 입력
 	private Timestamp createDate;
