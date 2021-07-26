@@ -9,11 +9,14 @@ import com.kim.blog.model.User;
 // DAO
 // 자동으로 bean등록 -> @Repository 생략 가능
 public interface UserRepository extends JpaRepository<User, Integer>{
-	// JPA Naming 쿼리 전략
-	// SELECT * FROM user WHERE username = ?1 AND password = ?2;
-	User findByUsernameAndPassword(String username, String password);
-	
-	// native 쿼리 전략
-//	@Query(value="SELECT * FROM user WHERE username = ?1 AND password = ?2", nativeQuery =  true)
-//	User login(String username, String password);
+
 }
+
+
+// JPA Naming 쿼리 전략
+// SELECT * FROM user WHERE username = ?1 AND password = ?2;
+//User findByUsernameAndPassword(String username, String password);
+
+// native 쿼리 전략
+//@Query(value="SELECT * FROM user WHERE username = ?1 AND password = ?2", nativeQuery =  true)
+//User login(String username, String password);
