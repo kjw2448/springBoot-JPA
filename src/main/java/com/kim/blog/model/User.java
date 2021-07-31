@@ -37,7 +37,7 @@ public class User {
 	@Column(nullable = false, length = 30)
 	private String username;
 	
-	@Column(nullable = false, length = 100) // 해쉬로 변경할때를 대비
+	@Column(nullable = false, length = 200) // 해쉬로 변경할때를 대비
 	private String password;
 	
 	@Column(nullable = false, length = 50)

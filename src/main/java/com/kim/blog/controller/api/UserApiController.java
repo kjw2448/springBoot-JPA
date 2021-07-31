@@ -23,7 +23,7 @@ public class UserApiController {
 //	@Autowired
 //	private HttpSession session;
 	
-
+	// login/Proc 는 만들지 않는다 => spring Security 이용 => SecurityConfig
 	
 	@PostMapping("/auth/joinProc")
 	public ResponseDto<Integer> save(@RequestBody User user) {// username, password, email
