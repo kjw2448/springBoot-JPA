@@ -40,12 +40,12 @@ public class Board {
 	@Lob // 대용량 데이터
 	private String content; // 섬머노트 사용할 것 <html>태그가 섞인다.
 	
-	@ColumnDefault("0")
+	
 	private int count; // 조회수
 	
 	@ManyToOne(fetch = FetchType.EAGER) // Many = Board , One = User // 기본전략 EAGER 무조건 들고온다
 	@JoinColumn(name="userId")
-	private User userId; // DB는 오브젝트를 저장할 수 없다.(FK사용),,,,,, 그러나 자바는 오브젝트를 저장할 수 있다.
+	private User user; // DB는 오브젝트를 저장할 수 없다.(FK사용),,,,,, 그러나 자바는 오브젝트를 저장할 수 있다.
 	
 	@OneToMany(mappedBy = "board", fetch =  FetchType.EAGER) // mappedBy 연관관계의 주인이 아니다 (FK키가 아니다) DB에 컬럼을 만들지 말아요
 	private List<Reply> reply; // 기본전략 LAZY 필요할때 가져온다
